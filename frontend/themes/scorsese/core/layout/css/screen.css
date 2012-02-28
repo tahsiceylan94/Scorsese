@@ -1475,7 +1475,7 @@ img.alignRight {
 			min-height: 90px;
 		}
 
-		.ie6 .logoNavWrapper .inner, .ie7 .logoNavWrapper .inner, .ie8 .logoNavWrapper .inner {
+		.ie6 .logoNavWrapper .innerdiv, .ie7 .logoNavWrapper .innerdiv, .ie8 .logoNavWrapper .innerdiv {
 			position: static;
 		}
 
@@ -1534,7 +1534,7 @@ img.alignRight {
 }
 
 @media (min-width: 960px) {
-	.inner {
+	.innerdiv {
 		width: 960px;
 		margin: 0 auto;
 	}

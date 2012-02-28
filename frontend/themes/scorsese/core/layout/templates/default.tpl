@@ -4,7 +4,7 @@
 	<div id="container">
 		<header id="header">
 			<div class="logoNavWrapper">
-				<div class="inner nav">
+				<div class="innerdiv nav">
 
 					{* Logo *}
 					<div id="logo">
@@ -19,7 +19,7 @@
 
 				</div>
 			</div>
-			<div class="inner headOption">
+			<div class="innerdiv headOption">
 				<div id="headerOptions" class="clearfix">
 
 					{* Search position *}
@@ -29,7 +29,6 @@
 
 					{* Language *}
 					<nav id="language">
-						<h4>{$lblLanguage|ucfirst}</h4>
 						{include:core/layout/templates/languages.tpl}
 					</nav>
 				</div>
@@ -39,7 +38,7 @@
 
 		<div id="mainWrapper" class="clearfix">
 
-			<div class="inner clearfix">
+			<div class="innerdiv clearfix">
 				<div id="main">
 					{* Main position *}
 					{iteration:positionMain}
@@ -62,14 +61,14 @@
 						{option:positionRight.blockIsHTML}
 							<section class="mod">
 								<div class="bd content">
-									{$positionLeft.blockContent}
+									{$positionRight.blockContent}
 								</div>
 								</div>
-						{/option:positionLeft.blockIsHTML}
-						{option:!positionLeft.blockIsHTML}
-							{$positionLeft.blockContent}
-						{/option:!positionLeft.blockIsHTML}
-					{/iteration:positionLeft}
+						{/option:positionRight.blockIsHTML}
+						{option:!positionRight.blockIsHTML}
+							{$positionRight.blockContent}
+						{/option:!positionRight.blockIsHTML}
+					{/iteration:positionRight}
 				</div>
 
 				<div class="side left">
