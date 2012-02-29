@@ -1023,6 +1023,7 @@ a.button:visited {
 				font-size: 30px;
 				color: #fff;
 				display: block;
+				line-height: 1.2;
 			}
 
 				#logo h1 a:hover {
@@ -1166,8 +1167,8 @@ a.button:visited {
 		font-size: 28px;
 		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 		color: #000;
-		margin-left: 20px;
-		padding: 15px 0 0 0;
+		margin-left: 18px;
+		padding: 17px 0 0 0;
 	}
 
 #main {
@@ -1466,7 +1467,7 @@ img.alignRight {
 
 		#logo h1, .ie6 #logo h1, .ie7 #logo h1 {
 			display: block;
-			margin: 20px 5px 20px 20px;
+			margin: 25px 5px 20px 20px;
 		}
 
 			.ie6 #logo, .ie7 #logo, .ie8 #logo {
@@ -1479,7 +1480,7 @@ img.alignRight {
 	}
 
 	#navigation {
-		padding: 20px 0 20px 40px;
+		padding: 24px 0 20px 40px;
 	}
 
 		.ie6 #navigation, .ie7 #navigation {
@@ -1493,7 +1494,7 @@ img.alignRight {
 
 			#navigation li {
 				width: auto;
-				padding: 13px 15px 7px 15px;
+				padding: 10px 15px 6px 15px;
 				border-right: 1px solid #c1c1c1;
 			}
 
@@ -1506,17 +1507,8 @@ img.alignRight {
 		background-color: #f5f5f5;
 		margin-top: 50px;
 		padding-top: 0;
-		min-height: 65px;
+		height: 91px;
 	}
-
-		.ie6 .logoNavWrapper {
-			height: 90px;
-		}
-
-		.ie7 .logoNavWrapper {
-			min-height: 90px;
-		}
-
 		.ie6 .logoNavWrapper .innerdiv, .ie7 .logoNavWrapper .innerdiv, .ie8 .logoNavWrapper .innerdiv {
 			position: static;
 		}
