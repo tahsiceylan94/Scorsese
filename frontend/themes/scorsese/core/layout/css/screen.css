@@ -1064,7 +1064,7 @@ a.button:visited {
 					border-bottom: none;
 				}
 
-				#navigation a.selected {
+				#navigation li.selected a {
 					color: #000;
 				}
 
@@ -1109,7 +1109,7 @@ a.button:visited {
 				border-bottom: none;
 			}
 
-			#language li a.selected {
+			#language li.selected a {
 				background-color: #a4a4a4;
 				color: #fff;
 			}
@@ -1132,11 +1132,8 @@ a.button:visited {
 	}
 
 		#eyeImg img {
-			width: 100%;
-		}
-
-		#eyeImg p {
-			float: right;
+			width: 100% !important;
+			height: auto !important;
 		}
 
 			#eyeContent h2 {
@@ -1197,6 +1194,15 @@ a.button:visited {
 		padding: 5px 0;
 		border-bottom: 1px solid #c9c9c9;
 	}
+
+		.side .mod .content ul {
+			padding-left: 0;
+		}
+
+		.side .mod .content li {
+			list-style-type: none;
+			padding-left: 0;
+		}
 
 		.side .mod li:last-child {
 			border-bottom: none;
@@ -1405,7 +1411,7 @@ img.alignRight {
 	}
 
 	#eyeImg {
-		width: 46%;
+		width: 46% !important;
 		float: left;
 	}
 
@@ -1488,6 +1494,7 @@ img.alignRight {
 
 	#eyeImg {
 		float: left;
+		width: auto !important;
 	}
 
 	#eyeContent {

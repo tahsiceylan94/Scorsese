@@ -8,12 +8,11 @@
 
 					{* Logo *}
 					<div id="logo">
-						<h2><a href="/">{$siteTitle}</a></h2>
+						<h1><a href="/">{$siteTitle}</a></h1>
 					</div>
 
 					{* Navigation *}
-					<nav id="headerNavigation">
-						<h4>{$lblMainNavigation|ucfirst}</h4>
+					<nav id="navigation" class="clearfix">
 						{$var|getnavigation:'page':0:1}
 					</nav>
 
