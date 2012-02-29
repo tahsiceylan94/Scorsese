@@ -1182,6 +1182,17 @@ a.button:visited {
 		padding: 0;
 	}
 
+	.article {
+		padding-bottom: 10px;
+		margin-bottom: 15px;
+		border-bottom: 1px solid #c9c9c9;
+	}
+
+	.article:last-child {
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+
 	.topInfo, .bottomInfo {
 		font-size: 12px;
 	}
@@ -1196,6 +1207,14 @@ a.button:visited {
 	padding: 0 20px 20px 20px;
 	font-size: 12px;
 }
+
+	.default .side .mod {
+		border-bottom: 1px solid #c9c9c9;
+	}
+
+	.default .side .mod:last-child {
+		border-bottom: none;
+	}
 
 	.side .mod h3 {
 		color: #000;
