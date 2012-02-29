@@ -1551,8 +1551,8 @@ img.alignRight {
 	}
 
 	.side .mod {
-		margin: 0;
-		padding: 20px 0 0 20px;
+		margin: 0 0 0 20px;
+		padding: 20px 0 0 0;
 	}
 
 		.right .mod {
