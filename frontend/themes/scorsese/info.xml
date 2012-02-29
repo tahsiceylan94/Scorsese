@@ -31,7 +31,7 @@
 				<position name="left" />
 			</positions>
 			<format>
-				[/,/,/,search],[right,main,main,left],[right,main,main,left]
+				[/,/,/,search],[left,main,main,right],[left,main,main,right]
 			</format>
 		</template>
 		<template label="Home" path="core/layout/templates/home.tpl">
@@ -48,7 +48,7 @@
 				<position name="left" />
 			</positions>
 			<format>
-				[/,/,/,search],[topleft,topleft,topright,topright],[right,main,main,left],[right,main,main,left]
+				[/,/,/,search],[topleft,topleft,topright,topright],[left,main,main,right],[left,main,main,right]
 			</format>
 		</template>
 	</templates>

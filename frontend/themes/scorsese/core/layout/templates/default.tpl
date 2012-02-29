@@ -1,6 +1,6 @@
 {include:core/layout/templates/head.tpl}
 
-<body class="{$LANGUAGE}" itemscope itemtype="http://schema.org/WebPage">
+<body class="{$LANGUAGE} default" itemscope itemtype="http://schema.org/WebPage">
 	<div id="container">
 		<header id="header">
 			<div class="logoNavWrapper">
@@ -36,6 +36,12 @@
 		</header>
 
 		<div id="mainWrapper" class="clearfix">
+
+			<div id="pageTitle">
+				<div class="innerdiv">
+					<h2>{$page.title}</h2>
+				</div>
+			</div>
 
 			<div class="innerdiv clearfix">
 				<div id="main">

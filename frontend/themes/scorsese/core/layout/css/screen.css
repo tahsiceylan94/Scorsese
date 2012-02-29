@@ -1157,6 +1157,19 @@ a.button:visited {
 					border-color: #92c0ff;
 				}
 
+#pageTitle {
+	border-bottom: 1px solid #f4cac9;
+	margin-bottom: 10px;
+}
+
+	#pageTitle h2 {
+		font-size: 28px;
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		color: #000;
+		margin-left: 20px;
+		padding: 15px 0 0 0;
+	}
+
 #main {
 	padding: 20px;
 }
@@ -1490,6 +1503,10 @@ img.alignRight {
 		border: none;
 		margin-top: 0;
 		padding-bottom: 0;
+	}
+
+	#pageTitle h2 {
+		margin-left: 204px;
 	}
 
 	#eyeImg {
