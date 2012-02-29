@@ -1216,6 +1216,10 @@ a.button:visited {
 		border-bottom: none;
 	}
 
+	.side .mod a {
+		font-weight: 700;
+	}
+
 	.side .mod h3 {
 		color: #000;
 		font-size: 12px;

@@ -79,7 +79,7 @@
 								<div class="bd content">
 									{$positionRight.blockContent}
 								</div>
-								</div>
+							</section>
 						{/option:positionRight.blockIsHTML}
 						{option:!positionRight.blockIsHTML}
 							{$positionRight.blockContent}
