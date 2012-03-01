@@ -119,6 +119,11 @@ a:focus {
 	color: #0033CC;
 }
 
+img {
+	border: 0;
+	display: block;
+	}
+
 /* .content defaults */
 
 .content ul {
@@ -1084,6 +1089,15 @@ a.button:visited {
 		float: left;
 	}
 
+		.ui-autocomplete {
+			width: 260px;
+		}
+
+		#searchIndex {
+			display: block;
+			min-height: 110px;
+		}
+
 	#language {
 		padding-top: 3px;
 		float: left;
@@ -1173,21 +1187,23 @@ a.button:visited {
 
 #main {
 	padding: 20px;
+	min-height: 1px;
 }
 
 	#blogIndex button {
 		margin: 15px 0;
 	}
 
-	#blogIndex h3 {
-		padding: 0;
-	}
-
-	.article {
+	.article, .comment, #faq .content, #searchIndex {
 		padding-bottom: 10px;
 		margin-bottom: 15px;
 		border-bottom: 1px solid #c9c9c9;
 	}
+
+		.imageHolder {
+			float: left;
+			margin-right: 20px;
+		}
 
 	.article:last-child {
 		margin-bottom: 0;
@@ -1204,10 +1220,19 @@ a.button:visited {
 
 /* Side */
 
+.side {
+	min-height: 1px;
+}
+
 .side .mod {
-	padding: 0 20px 20px 20px;
+	margin: 0 20px 0 20px;
+	padding: 20px 0 0 0;
 	font-size: 12px;
 }
+
+	.right .mod {
+		padding: 20px 20px 0 0;
+	}
 
 	.default .side .mod {
 		border-bottom: 1px solid #c9c9c9;
@@ -1422,6 +1447,14 @@ img.alignRight {
 			float: left;
 		}
 
+		.side .mod {
+			margin-right: 0;
+		}
+
+			.right .mod {
+				margin-right: 20px;
+			}
+
 }
 
 @media (min-width: 600px) {
@@ -1556,7 +1589,7 @@ img.alignRight {
 	}
 
 		.right .mod {
-			padding: 20px 20px 0 0;
+			padding: 20px 0 0 0;
 		}
 
 	#main {
@@ -1566,10 +1599,15 @@ img.alignRight {
 		padding: 0;
 	}
 
-	#blogIndex {
+	#blogIndex, #main .mod, #main #subpagesBlocks, #main #map, #main #mapWidget, #main .message {
 		margin: 0 184px;
 		padding: 20px;
 	}
+
+	#main #map, #main #mapWidget {
+		left: 20px;
+	}
+
 }
 
 @media (min-width: 960px) {
