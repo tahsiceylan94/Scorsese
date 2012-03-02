@@ -1046,6 +1046,10 @@ a.button:visited {
 
 				#logo h1 a:hover {
 					border-bottom: none;
+					-moz-box-shadow: 0 0 5px #666;
+					-webkit-box-shadow: 0 0 5px #666;
+					box-shadow: 0 0 5px #666;
+					-o-box-shadow: 0 0 5px #666;
 				}
 
 	/* Navigation */
@@ -1296,7 +1300,7 @@ a.button:visited {
 }
 
 	.push {
-		height: 50px;
+		height: 60px;
 	}
 
 	#footer ul {
