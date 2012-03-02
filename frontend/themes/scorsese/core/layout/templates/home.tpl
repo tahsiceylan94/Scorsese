@@ -112,6 +112,9 @@
 				<p>{$msgEnableJavascript}</p>
 			</div>
 		</noscript>
+
+		<div class="push"></div>
+
 	</div>
 
 	{include:core/layout/templates/footer.tpl}

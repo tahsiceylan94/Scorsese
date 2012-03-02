@@ -1,5 +1,4 @@
 {include:core/layout/templates/head.tpl}
-
 <body class="{$LANGUAGE} default" itemscope itemtype="http://schema.org/WebPage">
 	<div id="container">
 		<header id="header">
@@ -101,6 +100,9 @@
 				<p>{$msgEnableJavascript}</p>
 			</div>
 		</noscript>
+
+	<div class="push"></div>
+
 	</div>
 
 	{include:core/layout/templates/footer.tpl}
