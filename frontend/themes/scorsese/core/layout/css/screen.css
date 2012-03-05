@@ -1242,9 +1242,6 @@ a.button:visited {
 	font-size: 12px;
 }
 
-	.right .mod {
-		padding: 20px 20px 0 0;
-	}
 
 	.default .side .mod {
 		border-bottom: 1px solid #c9c9c9;
@@ -1455,8 +1452,8 @@ img.alignRight {
 		padding: 0 20px 0 0;
 	}
 
-		.side .mod {
-			width: 43%;
+		.side .mod, .right .mod {
+			width: 45%;
 			float: left;
 			margin: 0;
 			margin-left: 20px;
@@ -1497,6 +1494,11 @@ img.alignRight {
 		width: 50%;
 		float: right;
 	}
+
+		.side .mod, .right .mod {
+			width: 46%;
+		}
+
 }
 
 @media (min-width: 767px) {
@@ -1587,16 +1589,16 @@ img.alignRight {
 		padding: 0;
 	}
 
-	.right {
-		margin-left: -184px;
-	}
+		.right {
+			margin-left: -184px;
+		}
 
-	.side .mod {
-		width: auto;
-		float: none;
-		margin: 0 0 0 20px;
-		padding: 20px 0 0 0;
-	}
+		.side .mod {
+			width: auto;
+			float: none;
+			margin: 0 0 0 20px;
+			padding: 20px 0 0 0;
+		}
 
 		.right .mod {
 			padding: 20px 0 0 0;

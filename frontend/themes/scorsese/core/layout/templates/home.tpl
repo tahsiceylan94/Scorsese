@@ -71,7 +71,7 @@
 					{/iteration:positionMain}
 				</div>
 
-				<div class="side right">
+				<div class="side right clearfix">
 					{* Right position *}
 					{iteration:positionRight}
 						{option:positionRight.blockIsHTML}
@@ -87,7 +87,7 @@
 					{/iteration:positionRight}
 				</div>
 
-				<div class="side left">
+				<div class="side left clearfix">
 					{* Left position *}
 					{iteration:positionLeft}
 						{option:positionLeft.blockIsHTML}
