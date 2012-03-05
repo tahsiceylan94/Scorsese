@@ -1,6 +1,6 @@
 {option:pagination}
 	{option:pagination.multiple_pages}
-		<nav class="pagination clearfix">
+		<nav class="pagination">
 			<div class="bd">
 				<ul>
 					<li class="previousPage">
