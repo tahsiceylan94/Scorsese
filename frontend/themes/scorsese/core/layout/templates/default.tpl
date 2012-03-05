@@ -43,7 +43,7 @@
 			</div>
 
 			<div class="innerdiv clearfix">
-				<div id="main">
+				<div id="main" class="clearfix">
 					{* Main position *}
 					{iteration:positionMain}
 						{option:positionMain.blockIsHTML}
