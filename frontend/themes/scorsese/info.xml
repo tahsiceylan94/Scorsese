@@ -21,7 +21,7 @@
 	<templates>
 		<template label="Default" path="core/layout/templates/default.tpl">
 			<positions>
-				<position name="search">
+				<position name="top">
 					<defaults>
 						<widget module="search" action="form" />
 					</defaults>
@@ -38,11 +38,10 @@
 			<positions>
 				<position name="search">
 					<defaults>
-						<widget module="search" action="form" />
+						<widget module="top" action="form" />
 					</defaults>
 				</position>
-				<position name="topleft" />
-				<position name="topright" />
+				<position name="eyeCatch" />
 				<position name="right" />
 				<position name="main" />
 				<position name="left" />

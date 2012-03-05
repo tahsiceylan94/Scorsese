@@ -3,7 +3,7 @@
 	<div id="container">
 		<header id="header">
 			<div class="logoNavWrapper">
-				<div class="innerdiv nav">
+				<div class="wrapper nav">
 
 					{* Logo *}
 					<div id="logo">
@@ -17,13 +17,13 @@
 
 				</div>
 			</div>
-			<div class="innerdiv headOption">
+			<div class="wrapper headOption">
 				<div id="headerOptions" class="clearfix">
 
-					{* Search position *}
-					{iteration:positionSearch}
-						{$positionSearch.blockContent}
-					{/iteration:positionSearch}
+					{* Top position *}
+					{iteration:positionTop}
+						{$positionTop.blockContent}
+					{/iteration:positionTop}
 
 					{* Language *}
 					<nav id="language">
@@ -37,18 +37,34 @@
 		<div id="mainWrapper" class="clearfix">
 
 			<div id="pageTitle">
-				<div class="innerdiv">
+				<div class="wrapper">
 					<h2>{$page.title}</h2>
 				</div>
 			</div>
 
-			<div class="innerdiv clearfix">
-				<div id="main" class="clearfix">
+			<div class="wrapper clearfix">
+				<div class="side left clearfix">
+					{* Left position *}
+					{iteration:positionLeft}
+						{option:positionLeft.blockIsHTML}
+							<section class="mod">
+								<div class="content">
+									{$positionLeft.blockContent}
+								</div>
+							</section>
+						{/option:positionLeft.blockIsHTML}
+						{option:!positionLeft.blockIsHTML}
+							{$positionLeft.blockContent}
+						{/option:!positionLeft.blockIsHTML}
+					{/iteration:positionLeft}
+				</div>
+
+				<div id="main">
 					{* Main position *}
 					{iteration:positionMain}
 						{option:positionMain.blockIsHTML}
 							<div id="blogIndex">
-								<div class="bd content">
+								<div class="content">
 									{$positionMain.blockContent}
 								</div>
 							</div>
@@ -59,12 +75,12 @@
 					{/iteration:positionMain}
 				</div>
 
-				<div class="side right clearfix">
+				<div class="side right">
 					{* Right position *}
 					{iteration:positionRight}
 						{option:positionRight.blockIsHTML}
 							<section class="mod">
-								<div class="bd content">
+								<div class="content">
 									{$positionRight.blockContent}
 								</div>
 							</section>
@@ -73,22 +89,6 @@
 							{$positionRight.blockContent}
 						{/option:!positionRight.blockIsHTML}
 					{/iteration:positionRight}
-				</div>
-
-				<div class="side left clearfix">
-					{* Left position *}
-					{iteration:positionLeft}
-						{option:positionLeft.blockIsHTML}
-							<section class="mod">
-								<div class="bd content">
-									{$positionLeft.blockContent}
-								</div>
-							</section>
-						{/option:positionLeft.blockIsHTML}
-						{option:!positionLeft.blockIsHTML}
-							{$positionLeft.blockContent}
-						{/option:!positionLeft.blockIsHTML}
-					{/iteration:positionLeft}
 				</div>
 
 			</div>

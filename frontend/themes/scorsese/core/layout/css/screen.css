@@ -51,7 +51,7 @@ html, body {
 */
 
 body {
-	font-family: Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
 	color: #555;
@@ -77,7 +77,6 @@ strong, th, thead td, h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-size: 22px;
 	padding: 0 0 12px 0;
-	font-family: "Helvetica", "Helvetica Neue";
 }
 
 h2 {
@@ -988,7 +987,7 @@ a.button:visited {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -51px;
+	margin: 0 auto -61px;
 }
 
 /*
@@ -1003,30 +1002,17 @@ a.button:visited {
 	/* Logo */
 
 	#logo {
-		display: table;
 		margin: 20px auto;
 		height: 50px;
 	}
 
-		.ie6 #logo, .ie7 #logo {
-			float: left;
-			position: relative;
-			left: 50%;
-		}
-
 		#logo h1 {
-			display: table-cell;
-			float: left;
+			text-align: center;
 			padding: 0;
 		}
 
-			.ie6 #logo h1, .ie7 #logo h1 {
-				float: left;
-				position: relative;
-				left: -50%;
-			}
-
 			#logo h1 a {
+				
 				background-color: #545454;
 				padding: 0 10px 2px 10px;
 				text-transform: lowercase;
@@ -1035,7 +1021,6 @@ a.button:visited {
 				-moz-border-radius: 3px;
 				font-size: 30px;
 				color: #fff;
-				display: block;
 				line-height: 1.2;
 			}
 
@@ -1147,15 +1132,21 @@ a.button:visited {
 
 #eyeCatcher {
 	border-top: 1px solid #000;
-	padding: 20px 20px 10px 20px;
 	background-color: #545454;
 	color: #c9c9c9;
 	font-size: 16px;
 }
 
-	#eyeCatcher #eyeImg {
-		padding-top: 35px;
+	#eyeImg {
+		padding-top: 50px;
 		font-size: 11px;
+		margin: 0 20px;
+		padding-bottom: 20px;
+	}
+
+	#eyeContent {
+		margin: 0 20px;
+		padding-bottom: 20px;
 	}
 
 		#eyeImg img {
@@ -1206,6 +1197,10 @@ a.button:visited {
 		margin: 15px 0;
 	}
 
+		#blogIndex h3, #blogIndex h1 {
+			padding-bottom: 0;
+		}
+
 	.article, .comment, #faq .content, #searchIndex {
 		padding-bottom: 10px;
 		margin-bottom: 15px;
@@ -1242,14 +1237,6 @@ a.button:visited {
 	font-size: 12px;
 }
 
-	.default .side .mod {
-		border-bottom: 1px solid #c9c9c9;
-	}
-
-	.default .side .mod:last-child {
-		border-bottom: none;
-	}
-
 	.side .mod a {
 		font-weight: 700;
 	}
@@ -1258,6 +1245,10 @@ a.button:visited {
 		color: #000;
 		font-size: 12px;
 		font-weight: 700;
+	}
+
+	.left .mod h3 {
+		font-size: 14px;
 	}
 
 	.side .mod li {
@@ -1284,19 +1275,19 @@ a.button:visited {
 
 #footer {
 	border-top: 1px solid #f4cac9;
-	height: 50px;
+	height: 60px;
 	font-size: 11px;
 	color: #666;
 	background-color: #f5f5f5;
 }
 
 	.push {
-		height: 60px;
+		height: 70px;
 	}
 
 	#footer ul {
 		float: right;
-		margin: 20px;
+		margin: 10px 20px 0 20px;
 	}
 
 		#footer li {
@@ -1447,21 +1438,6 @@ img.alignRight {
 			width: 33%;
 		}
 
-	.side {
-		padding: 0 20px 0 0;
-	}
-
-		.side .mod, .right .mod {
-			width: 45%;
-			float: left;
-			margin: 0;
-			margin-left: 20px;
-		}
-
-}
-
-@media (min-width: 600px) {
-
 	#logo, .ie6 #logo, .ie7 #logo {
 		position: absolute;
 		top: 0;
@@ -1483,15 +1459,35 @@ img.alignRight {
 		padding-top: 90px;
 	}
 
+	.side {
+		padding: 0 20px 0 0;
+	}
+
+		.side .mod, .right .mod {
+			width: 45%;
+			float: left;
+			margin: 0;
+			margin-left: 20px;
+		}
+
+}
+
+@media (min-width: 600px) {
+	#eyeCatcher {
+		padding: 0 20px;
+	}
+
 	#eyeImg {
-		width: 46% !important;
+		width: 46%;
 		float: left;
+		margin: 0;
 	}
 
 	#eyeContent {
-		padding-top: 35px;
+		padding-top: 50px;
 		width: 50%;
 		float: right;
+		margin: 0;
 	}
 
 		.side .mod, .right .mod {
@@ -1502,18 +1498,10 @@ img.alignRight {
 
 @media (min-width: 767px) {
 	#logo, .ie6 #logo, .ie7 #logo {
-			position: relative;
-			display: inline;
-		}
-
-		#logo h1, .ie6 #logo h1, .ie7 #logo h1 {
-			display: block;
-			margin: 25px 5px 20px 20px;
-		}
-
-			.ie6 #logo, .ie7 #logo, .ie8 #logo {
-				position: static;
-			}
+		position: relative;
+		top: 7px;
+		float: left;
+	}
 
 	#headerOptions {
 		top: 0;
@@ -1521,16 +1509,12 @@ img.alignRight {
 	}
 
 	#navigation {
-		padding: 24px 0 20px 40px;
+		float: left;
 	}
-
-		.ie6 #navigation, .ie7 #navigation {
-			width: auto;
-			padding-left: 10px;
-		}
 
 		#navigation ul {
 			width: 100%;
+			padding-top: 15px;
 		}
 
 			#navigation li {
@@ -1550,7 +1534,7 @@ img.alignRight {
 		padding-top: 0;
 		height: 91px;
 	}
-		.ie6 .logoNavWrapper .innerdiv, .ie7 .logoNavWrapper .innerdiv, .ie8 .logoNavWrapper .innerdiv {
+		.ie6 .logoNavWrapper .wrapper, .ie7 .logoNavWrapper .wrapper, .ie8 .logoNavWrapper .wrapper {
 			position: static;
 		}
 
@@ -1562,12 +1546,13 @@ img.alignRight {
 	}
 
 	#pageTitle h2 {
-		margin-left: 204px;
+		margin-left: 20%;
+		padding-left: 20px;
 	}
 
 	#eyeImg {
 		float: left;
-		width: auto !important;
+		max-width: 50%;
 	}
 
 	#eyeContent {
@@ -1582,14 +1567,13 @@ img.alignRight {
 		}
 
 	.side {
-		width: 184px;
+		width: 20%;
 		float: left;
-		margin-left: -100%;
 		padding: 0;
 	}
 
 		.right {
-			margin-left: -184px;
+			float: right;
 		}
 
 		.side .mod {
@@ -1604,25 +1588,19 @@ img.alignRight {
 		}
 
 	#main {
-		width: 100%;
 		float: left;
+		width: 60%;
 		margin: 0;
 		padding: 0;
-	}
-
-	#blogIndex, #main .mod, #main #subpagesBlocks, #main #map, #main #mapWidget, #main .message {
-		margin: 0 184px;
-		padding: 20px;
 	}
 
 	#main #map, #main #mapWidget {
 		left: 20px;
 	}
-
 }
 
 @media (min-width: 960px) {
-	.innerdiv {
+	.wrapper {
 		width: 960px;
 		margin: 0 auto;
 	}

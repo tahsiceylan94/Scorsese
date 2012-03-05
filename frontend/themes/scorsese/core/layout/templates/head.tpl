@@ -8,6 +8,7 @@
 	{* Meta *}
 	<meta charset="utf-8" />
 	<meta name="generator" content="Fork CMS" />
+	<meta name="viewport" content="width=device-width">
 	{$meta}
 	{$metaCustom}
 

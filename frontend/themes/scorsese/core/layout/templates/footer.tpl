@@ -1,5 +1,5 @@
 <footer id="footer">
-	<div class="innerdiv">
+	<div class="wrapper">
 		<ul>
 			<li>&copy; {$now|date:'Y'} {$siteTitle}</li>
 			{iteration:footerLinks}
