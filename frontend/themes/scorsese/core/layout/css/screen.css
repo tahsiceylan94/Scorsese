@@ -1350,7 +1350,7 @@ a.button:visited {
 	float: left;
 	display: block;
 	padding: 4px 5px;
-	color: #ccc;
+	color: #555;
 	min-width: 12px;
 }
 
@@ -1370,7 +1370,7 @@ a.button:visited {
 	float: left;
 	display: block;
 	padding: 3px 4px;
-	border: 1px solid #ddd;
+	border: 1px solid #aaa;
 	text-decoration: none;
 	min-width: 12px;
 }
@@ -1386,7 +1386,7 @@ li.ellipsis span {
 .pagination li a:hover,
 .pagination li a:active {
 	background: #eee;
-	border: 1px solid #bbb;
+	border: 1px solid #999;
 	color: black;
 }
 
