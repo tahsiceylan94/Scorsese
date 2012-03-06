@@ -19,7 +19,7 @@
 				</div>
 			</div>
 			<div class="wrapper headOption">
-				<div id="headerOptions" class="clearfix">
+				<div id="headerOptions">
 
 					{* Top position *}
 					{iteration:positionTop}
@@ -46,7 +46,8 @@
 				</div>
 			{/option:positionEyeCatch}
 
-			<div class="wrapper clearfix">
+			<div class="wrapper">
+				{option:positionLeft}
 				<div class="side left clearfix">
 					{* Left position *}
 					{iteration:positionLeft}
@@ -62,16 +63,20 @@
 						{/option:!positionLeft.blockIsHTML}
 					{/iteration:positionLeft}
 				</div>
+				{/option:positionLeft}
+				{option:!positionLeft}
+					<div class="side push"></div>
+				{/option:!positionLeft}
 
 				<div id="main">
 					{* Main position *}
 					{iteration:positionMain}
 						{option:positionMain.blockIsHTML}
-							<div id="blogIndex">
+							<section class="mod">
 								<div class="content">
 									{$positionMain.blockContent}
 								</div>
-							</div>
+							</section>
 						{/option:positionMain.blockIsHTML}
 						{option:!positionMain.blockIsHTML}
 							{$positionMain.blockContent}
@@ -79,7 +84,8 @@
 					{/iteration:positionMain}
 				</div>
 
-				<div class="side right clearfix">
+				{option:positionRight}
+				<div class="side right">
 					{* Right position *}
 					{iteration:positionRight}
 						{option:positionRight.blockIsHTML}
@@ -94,6 +100,10 @@
 						{/option:!positionRight.blockIsHTML}
 					{/iteration:positionRight}
 				</div>
+				{/option:positionRight}
+				{option:!positionRight}
+					<div class="side push"></div>
+				{/option:!positionRight}
 
 			</div>
 		</div>

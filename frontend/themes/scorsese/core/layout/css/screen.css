@@ -922,27 +922,34 @@ button::-moz-focus-inner{ padding: 0; border: 0 }
 	input.inputSubmit,
 	input.inputButton,
 	button {
-		padding: 3px 8px;
+		padding: 2px 8px 3px;
 	}
 }
 
 .ie6 input.inputSubmit,
 .ie6 input.inputButton,
 .ie6 button {
-	margin-top: -1px;
+	margin-top: -2px;
 	padding: 1px 3px;
 }
 
 .ie7 input.inputSubmit,
 .ie7 input.inputButton,
 .ie7 button {
-	padding: 1px 3px 0 3px;
+	margin-top: -1px;
+	padding: 2px 3px 1px;
 }
 
 .ie8 input.inputSubmit,
 .ie8 input.inputButton,
 .ie8 button {
 	padding: 2px 3px;
+}
+
+.ie9 input.inputSubmit,
+.ie9 input.inputButton,
+.ie9 button {
+	padding: 2px 8px;
 }
 
 input.inputSubmit:hover,
@@ -1025,11 +1032,12 @@ a.button:visited {
 			}
 
 				#logo h1 a:hover {
+					color: #ddd;
 					border-bottom: none;
 					-moz-box-shadow: 0 0 5px #666;
 					-webkit-box-shadow: 0 0 5px #666;
-					box-shadow: 0 0 5px #666;
 					-o-box-shadow: 0 0 5px #666;
+					box-shadow: 0 0 5px #666;
 				}
 
 	/* Navigation */
@@ -1041,7 +1049,7 @@ a.button:visited {
 	}
 
 		.ie6 #navigation, .ie7 #navigation {
-			width: 100%;
+			
 		}
 
 		#navigation ul {
@@ -1197,11 +1205,15 @@ a.button:visited {
 		margin: 15px 0;
 	}
 
-		#blogIndex h3, #blogIndex h1 {
+		#blogIndex h3,
+		#blogIndex h1 {
 			padding-bottom: 0;
 		}
 
-	.article, .comment, #faq .content, #searchIndex {
+	.article,
+	.comment,
+	#faq .content,
+	#searchIndex {
 		padding-bottom: 10px;
 		margin-bottom: 15px;
 		border-bottom: 1px solid #c9c9c9;
@@ -1245,6 +1257,7 @@ a.button:visited {
 		color: #000;
 		font-size: 12px;
 		font-weight: 700;
+		padding-bottom: 4px;
 	}
 
 	.left .mod h3 {
@@ -1266,6 +1279,16 @@ a.button:visited {
 		}
 
 		.side .mod li:last-child {
+			border-bottom: none;
+		}
+
+	.subpagesBlock {
+		border-bottom: 1px solid #c9c9c9;
+		padding-bottom: 8px;
+		margin-bottom: 8px;
+	}
+
+		.subpagesBlock:last-child {
 			border-bottom: none;
 		}
 
@@ -1438,14 +1461,18 @@ img.alignRight {
 			width: 33%;
 		}
 
-	#logo, .ie6 #logo, .ie7 #logo {
+	#logo,
+	.ie6 #logo,
+	.ie7 #logo {
 		position: absolute;
 		top: 0;
 		left: 20px;
 		float: none;
 	}
 
-		#logo h1, .ie6 #logo h1, .ie7 #logo h1 {
+		#logo h1,
+		.ie6 #logo h1,
+		.ie7 #logo h1 {
 			left: 0;
 		}
 
@@ -1463,7 +1490,8 @@ img.alignRight {
 		padding: 0 20px 0 0;
 	}
 
-		.side .mod, .right .mod {
+		.side .mod,
+		.right .mod {
 			width: 45%;
 			float: left;
 			margin: 0;
@@ -1497,7 +1525,9 @@ img.alignRight {
 }
 
 @media (min-width: 767px) {
-	#logo, .ie6 #logo, .ie7 #logo {
+	#logo,
+	.ie6 #logo,
+	.ie7 #logo {
 		position: relative;
 		top: 7px;
 		float: left;
@@ -1515,6 +1545,7 @@ img.alignRight {
 		#navigation ul {
 			width: 100%;
 			padding-top: 15px;
+			margin: 0;
 		}
 
 			#navigation li {
@@ -1534,7 +1565,9 @@ img.alignRight {
 		padding-top: 0;
 		height: 91px;
 	}
-		.ie6 .logoNavWrapper .wrapper, .ie7 .logoNavWrapper .wrapper, .ie8 .logoNavWrapper .wrapper {
+		.ie6 .logoNavWrapper .wrapper,
+		.ie7 .logoNavWrapper .wrapper,
+		.ie8 .logoNavWrapper .wrapper {
 			position: static;
 		}
 
@@ -1594,7 +1627,13 @@ img.alignRight {
 		padding: 0;
 	}
 
-	#main #map, #main #mapWidget {
+		#main .mod,
+		#main #blogIndex {
+			padding: 20px;
+		}
+
+	#main #map,
+	#main #mapWidget {
 		left: 20px;
 	}
 }
@@ -1660,7 +1699,7 @@ img.alignRight {
 	}
 
 	/* place the divs and elements you want to hide here */
-	#navigation, #footer, #language, #breadcrumb {
+	#navigation, #footer, #language, #breadcrumb, .side, #eyeCatcher, #headerOptions {
 		display: none;
 	}
 
