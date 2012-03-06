@@ -7,35 +7,35 @@
 *}
 <div id="blogIndex">
 	<article class="article" itemscope itemtype="http://schema.org/Blog">
-			<meta itemprop="interactionCount" content="UserComments:{$commentsCount}">
-			<meta itemprop="author" content="{$item.user_id|usersetting:'nickname'}">
-			<h1 itemprop="name">{$item.title}</h1>
-			<p><span class="topInfo">{$item.publish_on|date:{$dateFormatLong}:{$LANGUAGE}} - 
-					{option:!item.comments}<a href="{$item.full_url}#{$actComment}">{$msgBlogNoComments|ucfirst}</a>{/option:!item.comments}
-					{option:item.comments}
-						{option:item.comments_multiple}<a href="{$item.full_url}#{$actComments}">{$msgBlogNumberOfComments|sprintf:{$item.comments_count}}</a>{/option:item.comments_multiple}
-						{option:!item.comments_multiple}<a href="{$item.full_url}#{$actComments}">{$msgBlogOneComment}</a>{/option:!item.comments_multiple}
-					{/option:item.comments}
-				</span></p>
-			<div class="bd content" itemprop="articleBody">
-				{option:item.image}<img src="{$FRONTEND_FILES_URL}/blog/images/source/{$item.image}" alt="{$item.title}" itemprop="image" />{/option:item.image}
-				{$item.text}
-			</div>
-			<p><span class="bottomInfo">{$msgWrittenBy|ucfirst|sprintf:{$item.user_id|usersetting:'nickname'}}
-				{$lblIn} {$lblThe} {$lblCategory} <a href="{$item.category_full_url}" title="{$item.category_title}">{$item.category_title}</a>{option:!item.tags}.{/option:!item.tags}
-				{option:item.tags}
-					{$lblTags}: 
-					{iteration:item.tags}
-						<a href="{$item.tags.full_url}" rel="tag" title="{$item.tags.name}">{$item.tags.name}</a>{option:!item.tags.last}, {/option:!item.tags.last}{option:item.tags.last}.{/option:item.tags.last}
-					{/iteration:item.tags}
-				{/option:item.tags}
+		<meta itemprop="interactionCount" content="UserComments:{$commentsCount}">
+		<meta itemprop="author" content="{$item.user_id|usersetting:'nickname'}">
+		<h1 itemprop="name">{$item.title}</h1>
+		<p><span class="topInfo">{$item.publish_on|date:{$dateFormatLong}:{$LANGUAGE}} - 
+				{option:!item.comments}<a href="{$item.full_url}#{$actComment}">{$msgBlogNoComments|ucfirst}</a>{/option:!item.comments}
+				{option:item.comments}
+					{option:item.comments_multiple}<a href="{$item.full_url}#{$actComments}">{$msgBlogNumberOfComments|sprintf:{$item.comments_count}}</a>{/option:item.comments_multiple}
+					{option:!item.comments_multiple}<a href="{$item.full_url}#{$actComments}">{$msgBlogOneComment}</a>{/option:!item.comments_multiple}
+				{/option:item.comments}
 			</span></p>
+		<div class="content" itemprop="articleBody">
+			{option:item.image}<img src="{$FRONTEND_FILES_URL}/blog/images/source/{$item.image}" alt="{$item.title}" itemprop="image" />{/option:item.image}
+			{$item.text}
+		</div>
+		<p><span class="bottomInfo">{$msgWrittenBy|ucfirst|sprintf:{$item.user_id|usersetting:'nickname'}}
+			{$lblIn} {$lblThe} {$lblCategory} <a href="{$item.category_full_url}" title="{$item.category_title}">{$item.category_title}</a>{option:!item.tags}.{/option:!item.tags}
+			{option:item.tags}
+				{$lblTags}: 
+				{iteration:item.tags}
+					<a href="{$item.tags.full_url}" rel="tag" title="{$item.tags.name}">{$item.tags.name}</a>{option:!item.tags.last}, {/option:!item.tags.last}{option:item.tags.last}.{/option:item.tags.last}
+				{/iteration:item.tags}
+			{/option:item.tags}
+		</span></p>
 	</article>
 
 	{option:comments}
 		<section id="blogComments" itemscope itemtype="http://schema.org/Article">
 			<h3 id="{$actComments}">{$lblComments|ucfirst}</h3>
-			<div class="bd content">
+			<div class="content">
 				{iteration:comments}
 					{* Do not alter the id! It is used as an anchor *}
 					<div id="comment-{$comments.id}" class="comment" itemprop="comment" itemscope itemtype="http://schema.org/UserComments">
@@ -67,34 +67,32 @@
 	{option:item.allow_comments}
 		<section id="blogCommentForm">
 			<h3 id="{$actComment}">{$msgComment|ucfirst}</h3>
-			<div class="bd">
-				{option:commentIsInModeration}<div class="message warning"><p>{$msgBlogCommentInModeration}</p></div>{/option:commentIsInModeration}
-				{option:commentIsSpam}<div class="message error"><p>{$msgBlogCommentIsSpam}</p></div>{/option:commentIsSpam}
-				{option:commentIsAdded}<div class="message success"><p>{$msgBlogCommentIsAdded}</p></div>{/option:commentIsAdded}
-				{form:commentsForm}
-					<div class="alignBlocks">
-						<p {option:txtAuthorError}class="errorArea"{/option:txtAuthorError}>
-							<label for="author">{$lblName|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
-							{$txtAuthor} {$txtAuthorError}
-						</p>
-						<p {option:txtEmailError}class="errorArea"{/option:txtEmailError}>
-							<label for="email">{$lblEmail|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
-							{$txtEmail} {$txtEmailError}
-						</p>
-					</div>
-					<p class="bigInput{option:txtWebsiteError} errorArea{/option:txtWebsiteError}">
-						<label for="website">{$lblWebsite|ucfirst}</label>
-						{$txtWebsite} {$txtWebsiteError}
+			{option:commentIsInModeration}<div class="message warning"><p>{$msgBlogCommentInModeration}</p></div>{/option:commentIsInModeration}
+			{option:commentIsSpam}<div class="message error"><p>{$msgBlogCommentIsSpam}</p></div>{/option:commentIsSpam}
+			{option:commentIsAdded}<div class="message success"><p>{$msgBlogCommentIsAdded}</p></div>{/option:commentIsAdded}
+			{form:commentsForm}
+				<div class="alignBlocks">
+					<p {option:txtAuthorError}class="errorArea"{/option:txtAuthorError}>
+						<label for="author">{$lblName|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
+						{$txtAuthor} {$txtAuthorError}
 					</p>
-					<p class="bigInput{option:txtMessageError} errorArea{/option:txtMessageError}">
-						<label for="message">{$lblMessage|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
-						{$txtMessage} {$txtMessageError}
+					<p {option:txtEmailError}class="errorArea"{/option:txtEmailError}>
+						<label for="email">{$lblEmail|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
+						{$txtEmail} {$txtEmailError}
 					</p>
-					<p>
-						<input class="inputSubmit" type="submit" name="comment" value="{$msgComment|ucfirst}" />
-					</p>
-				{/form:commentsForm}
-			</div>
+				</div>
+				<p class="bigInput{option:txtWebsiteError} errorArea{/option:txtWebsiteError}">
+					<label for="website">{$lblWebsite|ucfirst}</label>
+					{$txtWebsite} {$txtWebsiteError}
+				</p>
+				<p class="bigInput{option:txtMessageError} errorArea{/option:txtMessageError}">
+					<label for="message">{$lblMessage|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
+					{$txtMessage} {$txtMessageError}
+				</p>
+				<p>
+					<input class="inputSubmit" type="submit" name="comment" value="{$msgComment|ucfirst}" />
+				</p>
+			{/form:commentsForm}
 		</section>
 	{/option:item.allow_comments}
 </div>

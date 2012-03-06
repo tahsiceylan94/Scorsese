@@ -8,17 +8,15 @@
 		<header class="hd">
 			<h3>{$lblRecentArticles|ucfirst}</h3>
 		</header>
-		<div class="bd content">
+		<div class="content">
 			<ul>
 				{iteration:widgetBlogRecentArticlesList}
 					<li><a href="{$widgetBlogRecentArticlesList.full_url}" title="{$widgetBlogRecentArticlesList.title}">{$widgetBlogRecentArticlesList.title}</a></li>
 				{/iteration:widgetBlogRecentArticlesList}
 			</ul>
 		</div>
-		<footer class="ft">
-			<p>
-				<a href="{$var|geturlforblock:'blog'}">{$lblBlogArchive|ucfirst}</a>
-			</p>
-		</footer>
+		<p>
+			<a href="{$var|geturlforblock:'blog'}">{$lblBlogArchive|ucfirst}</a>
+		</p>
 	</section>
 {/option:widgetBlogRecentArticlesList}

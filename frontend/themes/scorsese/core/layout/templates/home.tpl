@@ -68,21 +68,28 @@
 					<div class="side push"></div>
 				{/option:!positionLeft}
 
-				<div id="main">
-					{* Main position *}
-					{iteration:positionMain}
-						{option:positionMain.blockIsHTML}
-							<section class="mod">
-								<div class="content">
+				{option:positionMain}
+					<div id="main">
+						{* Main position *}
+						<div id="innerMain">
+							{iteration:positionMain}
+								{option:positionMain.blockIsHTML}
+									<section class="mod">
+										<div class="content">
+											{$positionMain.blockContent}
+										</div>
+									</section>
+								{/option:positionMain.blockIsHTML}
+								{option:!positionMain.blockIsHTML}
 									{$positionMain.blockContent}
-								</div>
-							</section>
-						{/option:positionMain.blockIsHTML}
-						{option:!positionMain.blockIsHTML}
-							{$positionMain.blockContent}
-						{/option:!positionMain.blockIsHTML}
-					{/iteration:positionMain}
-				</div>
+								{/option:!positionMain.blockIsHTML}
+							{/iteration:positionMain}
+						</div>
+					</div>
+				{/option:positionMain}
+				{option:!positionMain}
+					<div class="push" id="main"></div>
+				{/option:!positionMain}
 
 				{option:positionRight}
 				<div class="side right">

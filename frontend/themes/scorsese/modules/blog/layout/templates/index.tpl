@@ -22,7 +22,7 @@
 						{option:!items.comments_multiple}<a href="{$items.full_url}#{$actComments}">{$msgBlogOneComment}</a>{/option:!items.comments_multiple}
 					{/option:items.comments}
 				</span></p>
-				<div class="bd content">
+				<div class="content">
 					{option:items.image}<img src="{$FRONTEND_FILES_URL}/blog/images/source/{$items.image}" alt="{$items.title}" />{/option:items.image}
 					{option:!items.introduction}{$items.text}{/option:!items.introduction}
 					{option:items.introduction}{$items.introduction}{/option:items.introduction}

@@ -4,8 +4,8 @@
 *}
 
 {option:!faqCategories}
-	<div id="blogIndex">
-		<div class="bd content">
+	<div class="mod">
+		<div class="content">
 			<p>{$msgFaqNoItems}</p>
 		</div>
 	</div>
@@ -20,20 +20,17 @@
 				{/iteration:faqCategories}
 			</ul>
 		</div>
-		<div class="bd">
-			{iteration:faqCategories}
-				<section>
-					<h3 id="{$faqCategories.url}"><a href="{$faqCategories.full_url}" title="{$faqCategories.title}">{$faqCategories.title}</a></h3>
-
-					<div class="bd content">
-						<ul>
-							{iteration:faqCategories.questions}
-								<li><a href="{$faqCategories.questions.full_url}">{$faqCategories.questions.question}</a></li>
-							{/iteration:faqCategories.questions}
-						</ul>
-					</div>
-				</section>
-			{/iteration:faqCategories}
-		</div>
+		{iteration:faqCategories}
+			<section>
+				<h3 id="{$faqCategories.url}"><a href="{$faqCategories.full_url}" title="{$faqCategories.title}">{$faqCategories.title}</a></h3>
+				<div class="content">
+					<ul>
+						{iteration:faqCategories.questions}
+							<li><a href="{$faqCategories.questions.full_url}">{$faqCategories.questions.question}</a></li>
+						{/iteration:faqCategories.questions}
+					</ul>
+				</div>
+			</section>
+		{/iteration:faqCategories}
 	</section>
 {/option:faqCategories}

@@ -19,7 +19,7 @@
 				</span>
 			</p>
 		</header>
-		<div class="bd content">
+		<div class="content">
 			{$item.answer}
 		</div>
 	</article>
@@ -29,7 +29,7 @@
 			<header class="hd">
 				<h3>{$msgQuestionsInSameCategory|ucfirst}</h3>
 			</header>
-			<div class="bd content">
+			<div class="content">
 				<ul>
 					{iteration:inSameCategory}
 						<li><a href="{$inSameCategory.full_url}" title="{$inSameCategory.question}">{$inSameCategory.question}</a></li>
@@ -44,7 +44,7 @@
 			<header class="hd">
 				<h3>{$msgRelatedQuestions|ucfirst}</h3>
 			</header>
-			<div class="bd content">
+			<div class="content">
 				<ul>
 					{iteration:related}
 						<li><a href="{$related.full_url}" title="{$related.question}">{$related.question}</a></li>
@@ -58,39 +58,35 @@
 
 	{option:settings.allow_feedback}
 		<section id="faqFeedbackForm" class="mod">
-			<div class="inner">
-				<header class="hd">
-					<h3 id="{$actFeedback}">{$msgFeedback|ucfirst}</h3>
-				</header>
-				<div class="bd">
-					{option:success}<div class="message success"><p>{$msgFeedbackSuccess}</p></div>{/option:success}
-					{option:spam}<div class="message error"><p>{$errFeedbackSpam}</p></div>{/option:spam}
+			<header class="hd">
+				<h3 id="{$actFeedback}">{$msgFeedback|ucfirst}</h3>
+			</header>
+			{option:success}<div class="message success"><p>{$msgFeedbackSuccess}</p></div>{/option:success}
+			{option:spam}<div class="message error"><p>{$errFeedbackSpam}</p></div>{/option:spam}
 
-					{form:feedback}
-						{$hidQuestionId}
-						<div class="options">
-							<ul class="inputList">
-								{iteration:useful}
-									<li>
-										{$useful.rbtUseful}
-										<label for="{$useful.id}">{$useful.label|ucfirst}</label>
-									</li>
-								{/iteration:useful}
-							</ul>
-						</div>
-
-						<div id="feedbackNoInfo"{option:hideFeedbackNoInfo} style="display: none;"{/option:hideFeedbackNoInfo}>
-							<p class="bigInput{option:txtMessageError} errorArea{/option:txtMessageError}">
-								<label for="message">{$msgHowToImprove|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
-								{$txtMessage} {$txtMessageError}
-							</p>
-							<p>
-								<input class="inputSubmit" type="submit" name="comment" value="{$lblSend|ucfirst}" />
-							</p>
-						</div>
-					{/form:feedback}
+			{form:feedback}
+				{$hidQuestionId}
+				<div class="options">
+					<ul class="inputList">
+						{iteration:useful}
+							<li>
+								{$useful.rbtUseful}
+								<label for="{$useful.id}">{$useful.label|ucfirst}</label>
+							</li>
+						{/iteration:useful}
+					</ul>
 				</div>
-			</div>
+
+				<div id="feedbackNoInfo"{option:hideFeedbackNoInfo} style="display: none;"{/option:hideFeedbackNoInfo}>
+					<p class="bigInput{option:txtMessageError} errorArea{/option:txtMessageError}">
+						<label for="message">{$msgHowToImprove|ucfirst}<abbr title="{$lblRequiredField}">*</abbr></label>
+						{$txtMessage} {$txtMessageError}
+					</p>
+					<p>
+						<input class="inputSubmit" type="submit" name="comment" value="{$lblSend|ucfirst}" />
+					</p>
+				</div>
+			{/form:feedback}
 		</section>
 	{/option:settings.allow_feedback}
 </div>

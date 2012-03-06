@@ -1627,8 +1627,7 @@ img.alignRight {
 		padding: 0;
 	}
 
-		#main .mod,
-		#main #blogIndex {
+		#innerMain {
 			padding: 20px;
 		}
 
